@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/banner-shenpei-pf/static/css/main.f75d8cfc.css",
+    "main.js": "/banner-shenpei-pf/static/js/main.2d2731d6.js",
+    "static/js/453.0dc12be8.chunk.js": "/banner-shenpei-pf/static/js/453.0dc12be8.chunk.js",
+    "index.html": "/banner-shenpei-pf/index.html",
+    "main.f75d8cfc.css.map": "/banner-shenpei-pf/static/css/main.f75d8cfc.css.map",
+    "main.2d2731d6.js.map": "/banner-shenpei-pf/static/js/main.2d2731d6.js.map",
+    "453.0dc12be8.chunk.js.map": "/banner-shenpei-pf/static/js/453.0dc12be8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f75d8cfc.css",
+    "static/js/main.2d2731d6.js"
+  ]
+}
