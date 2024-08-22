@@ -18,8 +18,7 @@ const Cut1: React.FC<CutOneProps> = ({onAnimationEnd}) => {
       <div >
         <img 
         src='https://shenpei0617.github.io/video/cut1_bg.png' 
-        alt='' 
-        onLoad={() => setIsLoaded(true)}
+        alt=''
         className={`w-full transition duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-50'}`}
         />
       </div>
@@ -27,7 +26,6 @@ const Cut1: React.FC<CutOneProps> = ({onAnimationEnd}) => {
         <img src='https://shenpei0617.github.io/video/cut1_logo.png'
         alt=""
         className={`w-full transform transition ease-in-out duration-1000 ${isLoaded ? 'scale-100' : 'scale-50'}`}
-        onLoad={() => setIsLoaded(true)}
         />
       </div>
     </div>
