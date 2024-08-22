@@ -6,23 +6,12 @@ import CutTwo from './page/cut2'
 
 function App() {
   const [showCut2, setShowCut2] = useState(false);
-  const [fadeOut, setFadeOut] = useState(false);
 
-  //cut1動畫結束後淡出
   const handleAnimationEnd = () => {
     setTimeout(()=>{
-      setFadeOut(true)
-    },900) 
+      setShowCut2(true)
+    },700) 
   };
-
-  useEffect(() => {
-    if (fadeOut) {
-      const timeoutId = setTimeout(() => {
-        setShowCut2(true);
-      }, 600); // 等待動畫後再切換
-      return () => clearTimeout(timeoutId);
-    }
-  }, [fadeOut]);
 
   return (
     <div>
@@ -34,7 +23,7 @@ function App() {
       </header>
       <div className='flex justify-center items-center h-screen bg-slate-200'>
       {showCut2 ? 
-      <CutTwo />:<CutOne onAnimationEnd={handleAnimationEnd} className={`transition-opacity duration-1000 ${fadeOut ? 'opacity-70' : 'opacity-100'}`}/>}
+      <CutTwo />:<CutOne onAnimationEnd={handleAnimationEnd}/>}
       </div>
 
     </div>

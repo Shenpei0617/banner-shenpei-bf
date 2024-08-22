@@ -3,11 +3,9 @@ import React, {useState, useEffect} from 'react';
 
 interface CutOneProps {
   onAnimationEnd: () => void;
-  className?: string;
 }
 
-
-const Cut1: React.FC<CutOneProps> = ({ onAnimationEnd ,className }) => {
+const Cut1: React.FC<CutOneProps> = ({onAnimationEnd}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   //畫面載入
   useEffect(() => {
@@ -16,7 +14,7 @@ const Cut1: React.FC<CutOneProps> = ({ onAnimationEnd ,className }) => {
 
 
   return (
-    <div className={`w-[320px] h-[480px] relative ${className}`} onTransitionEnd={onAnimationEnd}>
+    <div className={`w-[320px] h-[480px] relative`} onTransitionEnd={onAnimationEnd}>
       <div >
         <img 
         src='https://shenpei0617.github.io/video/cut1_bg.png' 
