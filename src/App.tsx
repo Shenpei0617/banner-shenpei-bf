@@ -1,4 +1,4 @@
-import React,{ useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import './App.css';
 import CutOne from './page/cut1'
 import CutTwo from './page/cut2'
@@ -6,10 +6,23 @@ import CutTwo from './page/cut2'
 
 function App() {
   const [showCut2, setShowCut2] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
-  const handleVideoEnd = () => {
-    setShowCut2(true); // 當影片結束時，切換到 Cut2
+  //cut1動畫結束後淡出
+  const handleAnimationEnd = () => {
+    setTimeout(()=>{
+      setFadeOut(true)
+    },900) 
   };
+
+  useEffect(() => {
+    if (fadeOut) {
+      const timeoutId = setTimeout(() => {
+        setShowCut2(true);
+      }, 600); // 等待動畫後再切換
+      return () => clearTimeout(timeoutId);
+    }
+  }, [fadeOut]);
 
   return (
     <div>
@@ -20,8 +33,10 @@ function App() {
       />
       </header>
       <div className='flex justify-center items-center h-screen bg-slate-200'>
-      {showCut2 ? <CutTwo /> : <CutOne onVideoEnd={handleVideoEnd} />}
+      {showCut2 ? 
+      <CutTwo />:<CutOne onAnimationEnd={handleAnimationEnd} className={`transition-opacity duration-1000 ${fadeOut ? 'opacity-70' : 'opacity-100'}`}/>}
       </div>
+
     </div>
   );
 }

@@ -1,4 +1,6 @@
-import React,{ useState, useEffect } from 'react';
+import React,{ useState, useEffect, useRef} from 'react';
+
+
 
 const Cut2: React.FC = () => {
   // const images =[cotTwoCaOne, cotTwoCaTwo, cotTwoCaThree]
@@ -15,6 +17,7 @@ const Cut2: React.FC = () => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (isPlaying) {
@@ -54,17 +57,28 @@ const Cut2: React.FC = () => {
     );
     setIsPlaying(false); 
   };
+  
+  //影片暫停
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
 
   return (
     <div className='w-[320px] h-[480px] relative bg-white'>
-      <div className='flex justify-center items-center box-border p-5'>
-        <img src='https://shenpei0617.github.io/video/cut1_logo.png' alt="" className='w-6/12 cut-two-logoImg'/>
+      <div className='w-full cursor-pointer' onClick={handleVideoClick}>
+        <a href="https://www.performics.com/category/performics-news/" target="_blank" rel="noreferrer">
+          <video autoPlay muted ref={videoRef}>
+            <source src='https://shenpei0617.github.io/video/video.mp4' type='video/mp4' />
+          </video>
+        </a>
       </div>
       <div className='relative'>
         <button onClick={prevImage} className='absolute top-1/2 left-0 translate-y-[-50%]'>
           <i className="fa-solid fa-chevron-left text-stone-50"></i>
         </button>
-        <a href={src[currentIndex]} target="_blank" onClick={() => setIsPlaying(false)} rel="noreferrer">
+        <a href={src[currentIndex]} target="_blank" rel="noreferrer">
           <img src={images[currentIndex]} alt="" className='w-full' />
         </a>
         <button onClick={nextImage} className='absolute top-1/2 right-0 translate-y-[-50%]'>
