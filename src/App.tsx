@@ -10,8 +10,9 @@ function App() {
   const handleAnimationEnd = () => {
     setTimeout(()=>{
       setShowCut2(true)
-    },700) 
+    },800) 
   };
+
 
   return (
     <div>

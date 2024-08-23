@@ -9,7 +9,11 @@ const Cut1: React.FC<CutOneProps> = ({onAnimationEnd}) => {
   const [isLoaded, setIsLoaded] = useState(false);
   //畫面載入
   useEffect(() => {
-    setIsLoaded(true);
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100); 
+
+    return () => clearTimeout(timer);
   }, []);
 
 
@@ -18,7 +22,7 @@ const Cut1: React.FC<CutOneProps> = ({onAnimationEnd}) => {
       <div >
         <img 
         src='https://shenpei0617.github.io/video/cut1_bg.png' 
-        alt=''
+        alt='' 
         className={`w-full transition duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-50'}`}
         />
       </div>

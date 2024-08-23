@@ -3,7 +3,7 @@ import React,{ useState, useEffect, useRef} from 'react';
 
 
 const Cut2: React.FC = () => {
-  // const images =[cotTwoCaOne, cotTwoCaTwo, cotTwoCaThree]
+
   const images =[
     'https://shenpei0617.github.io/video/cut2_carousal1.png',
     'https://shenpei0617.github.io/video/cut2_carousal2.png',
