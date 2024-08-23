@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/banner-shenpei-pf/static/css/main.f75d8cfc.css",
-    "main.js": "/banner-shenpei-pf/static/js/main.88824076.js",
+    "main.css": "/banner-shenpei-pf/static/css/main.33204caf.css",
+    "main.js": "/banner-shenpei-pf/static/js/main.10380cb1.js",
     "static/js/453.0dc12be8.chunk.js": "/banner-shenpei-pf/static/js/453.0dc12be8.chunk.js",
     "index.html": "/banner-shenpei-pf/index.html",
-    "main.f75d8cfc.css.map": "/banner-shenpei-pf/static/css/main.f75d8cfc.css.map",
-    "main.88824076.js.map": "/banner-shenpei-pf/static/js/main.88824076.js.map",
+    "main.33204caf.css.map": "/banner-shenpei-pf/static/css/main.33204caf.css.map",
+    "main.10380cb1.js.map": "/banner-shenpei-pf/static/js/main.10380cb1.js.map",
     "453.0dc12be8.chunk.js.map": "/banner-shenpei-pf/static/js/453.0dc12be8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f75d8cfc.css",
-    "static/js/main.88824076.js"
+    "static/css/main.33204caf.css",
+    "static/js/main.10380cb1.js"
   ]
 }
